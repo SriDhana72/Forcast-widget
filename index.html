@@ -13,8 +13,6 @@
 </head>
 <body class="p-6 md:p-12">
     <div class="w-full mx-auto bg-white rounded-xl shadow-lg p-6">
-        <h1 class="text-2xl font-bold mb-6 text-gray-800">Organization Hierarchy - Q2</h1>
-
         <!-- Desktop/Tablet View - Header Row -->
         <div class="hidden md:flex md:items-center md:justify-between font-semibold text-gray-600 border-b border-gray-200 pb-3 mb-3">
             <div class="flex items-center gap-x-2">
@@ -29,6 +27,7 @@
                 <div class="w-12">%</div>
             </div>
         </div>
+
         <!-- Data Rows -->
         <div class="space-y-2">
             <!-- Sales Head Row -->
@@ -41,14 +40,14 @@
                 <div class="flex-grow flex justify-between items-center md:flex-row md:justify-between">
                     <div class="flex flex-col">
                         <span class="font-medium text-gray-900">Peter</span>
-                        <span class="text-sm text-gray-500">Executive</span>
+                        <span class="text-sm text-gray-500">Sales Head</span>
                     </div>
                     <div class="flex items-center gap-x-3 text-sm">
                         <div class="flex flex-col md:w-20 md:text-right">
                             <span class="md:hidden font-semibold text-gray-600">Target:</span><span class="font-medium">$1.1M</span>
                         </div>
                         <div class="flex flex-col md:w-20 md:text-right">
-                            <span class="md:hidden font-semibold text-gray-600">Achieved:</span><span class="font-medium">$1.0M</span>
+                            <span class="md:hidden font-semibold text-gray-600">Achieved:</span><span class="font-medium text-green-600">$1.0M</span>
                         </div>
                         <div class="flex flex-col md:w-16 md:text-right text-red-500">
                             <span class="md:hidden font-semibold text-gray-600">Gap:</span><span class="font-medium">$-84000</span>
@@ -57,7 +56,7 @@
                             <span class="md:hidden font-semibold text-gray-600">Pipeline:</span><span class="font-medium">$1.2M</span>
                         </div>
                         <div class="flex flex-col md:w-12 md:text-right">
-                            <span class="md:hidden font-semibold text-gray-600">%:</span><span class="font-medium">92%</span>
+                            <span class="md:hidden font-semibold text-gray-600">%:</span><span class="font-medium text-green-600">92%</span>
                         </div>
                     </div>
                 </div>
@@ -66,7 +65,7 @@
             <!-- Nested Data - Hidden by default -->
             <div id="sales-head-data" class="hidden pl-6">
                 <div class="space-y-2">
-                    <!-- Regional Manager - Peter -->
+                    <!-- Regional Manager - Logan -->
                     <div id="regional-peter-row" class="flex items-center gap-4 p-3 rounded-lg bg-white cursor-pointer" onclick="toggleDropdown('regional-peter-data', 'regional-peter-arrow')">
                         <div class="flex-shrink-0">
                             <svg id="regional-peter-arrow" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-400 transform rotate-0 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -83,7 +82,7 @@
                                     <span class="md:hidden font-semibold text-gray-600">Target:</span><span class="font-medium">$550.0K</span>
                                 </div>
                                 <div class="flex flex-col md:w-20 md:text-right">
-                                    <span class="md:hidden font-semibold text-gray-600">Achieved:</span><span class="font-medium">$505.0K</span>
+                                    <span class="md:hidden font-semibold text-gray-600">Achieved:</span><span class="font-medium text-green-600">$505.0K</span>
                                 </div>
                                 <div class="flex flex-col md:w-16 md:text-right text-red-500">
                                     <span class="md:hidden font-semibold text-gray-600">Gap:</span><span class="font-medium">$-45000</span>
@@ -92,7 +91,7 @@
                                     <span class="md:hidden font-semibold text-gray-600">Pipeline:</span><span class="font-medium">$590.0K</span>
                                 </div>
                                 <div class="flex flex-col md:w-12 md:text-right">
-                                    <span class="md:hidden font-semibold text-gray-600">%:</span><span class="font-medium">92%</span>
+                                    <span class="md:hidden font-semibold text-gray-600">%:</span><span class="font-medium text-green-600">92%</span>
                                 </div>
                             </div>
                         </div>
@@ -100,47 +99,45 @@
                     
                     <!-- Nested Data for Peter - Hidden by default -->
                     <div id="regional-peter-data" class="hidden pl-6">
-                        <!-- Quarterly Summary -->
-                        <h2 class="text-lg font-semibold text-gray-800 my-4">Quarterly Summary</h2>
-                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-4 text-sm">
+                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-4 text-xs">
                             <!-- Q1 Card -->
-                            <div class="bg-gray-100 p-4 rounded-lg border border-gray-200">
-                                <h3 class="font-bold text-gray-800 mb-2">Q1</h3>
-                                <div class="text-sm">
+                            <div class="bg-white-100 p-4 rounded-lg border border-gray-200">
+                                <h3 class="font-bold text-gray-800 mb-2 text-sm">Q1</h3>
+                                <div>
                                     <p>Target: <span class="float-right font-medium text-gray-700">$250.0K</span></p>
-                                    <p>Achieved: <span class="float-right font-medium text-gray-700">$235.0K</span></p>
-                                    <p>Gap: <span class="float-right font-medium text-red-500">$-15000</span></p>
-                                    <p>Performance: <span class="float-right font-medium text-green-600">94%</span></p>
+                                    <p>Achieved: <span class="float-right font-medium text-green-600">$235.0K</span></p>
+                                    <p class="pb-2 border-b border-gray-300">Gap: <span class="float-right font-medium text-red-500">$-15000</span></p>
+                                    <p class="pt-2">Performance: <span class="float-right font-medium text-green-600">94%</span></p>
                                 </div>
                             </div>
                             <!-- Q2 Card -->
-                            <div class="bg-gray-100 p-4 rounded-lg border border-gray-200">
-                                <h3 class="font-bold text-gray-800 mb-2">Q2</h3>
-                                <div class="text-sm">
+                            <div class="bg-white-100 p-4 rounded-lg border border-gray-200">
+                                <h3 class="font-bold text-gray-800 mb-2 text-sm">Q2</h3>
+                                <div>
                                     <p>Target: <span class="float-right font-medium text-gray-700">$300.0K</span></p>
-                                    <p>Achieved: <span class="float-right font-medium text-gray-700">$270.0K</span></p>
-                                    <p>Gap: <span class="float-right font-medium text-red-500">$-30000</span></p>
-                                    <p>Performance: <span class="float-right font-medium text-green-600">90%</span></p>
+                                    <p>Achieved: <span class="float-right font-medium text-green-600">$270.0K</span></p>
+                                    <p class="pb-2 border-b border-gray-300">Gap: <span class="float-right font-medium text-red-500">$-30000</span></p>
+                                    <p class="pt-2">Performance: <span class="float-right font-medium text-green-600">90%</span></p>
                                 </div>
                             </div>
                             <!-- Q3 Card -->
-                            <div class="bg-gray-100 p-4 rounded-lg border border-gray-200">
-                                <h3 class="font-bold text-gray-800 mb-2">Q3</h3>
-                                <div class="text-sm">
+                            <div class="bg-white-100 p-4 rounded-lg border border-gray-200">
+                                <h3 class="font-bold text-gray-800 mb-2 text-sm">Q3</h3>
+                                <div>
                                     <p>Target: <span class="float-right font-medium text-gray-700">$350.0K</span></p>
-                                    <p>Achieved: <span class="float-right font-medium text-gray-700">$330.0K</span></p>
-                                    <p>Gap: <span class="float-right font-medium text-red-500">$-20000</span></p>
-                                    <p>Performance: <span class="float-right font-medium text-green-600">94%</span></p>
+                                    <p>Achieved: <span class="float-right font-medium text-green-600">$330.0K</span></p>
+                                    <p class="pb-2 border-b border-gray-300">Gap: <span class="float-right font-medium text-red-500">$-20000</span></p>
+                                    <p class="pt-2">Performance: <span class="float-right font-medium text-green-600">94%</span></p>
                                 </div>
                             </div>
                             <!-- Q4 Card -->
-                            <div class="bg-gray-100 p-4 rounded-lg border border-gray-200">
-                                <h3 class="font-bold text-gray-800 mb-2">Q4</h3>
-                                <div class="text-sm">
+                            <div class="bg-white-100 p-4 rounded-lg border border-gray-200">
+                                <h3 class="font-bold text-gray-800 mb-2 text-sm">Q4</h3>
+                                <div>
                                     <p>Target: <span class="float-right font-medium text-gray-700">$400.0K</span></p>
-                                    <p>Achieved: <span class="float-right font-medium text-gray-700">0</span></p>
-                                    <p>Gap: <span class="float-right font-medium text-red-500">$-400000</span></p>
-                                    <p>Performance: <span class="float-right font-medium text-red-500">0%</span></p>
+                                    <p>Achieved: <span class="float-right font-medium text-green-600">0</span></p>
+                                    <p class="pb-2 border-b border-gray-300">Gap: <span class="float-right font-medium text-red-500">$-400000</span></p>
+                                    <p class="pt-2">Performance: <span class="float-right font-medium text-green-600">0%</span></p>
                                 </div>
                             </div>
                         </div>
@@ -165,7 +162,7 @@
                                             <span class="md:hidden font-semibold text-gray-600">Target:</span><span class="font-medium">$290.0K</span>
                                         </div>
                                         <div class="flex flex-col md:w-20 md:text-right">
-                                            <span class="md:hidden font-semibold text-gray-600">Achieved:</span><span class="font-medium">$265.0K</span>
+                                            <span class="md:hidden font-semibold text-gray-600">Achieved:</span><span class="font-medium text-green-600">$265.0K</span>
                                         </div>
                                         <div class="flex flex-col md:w-16 md:text-right text-red-500">
                                             <span class="md:hidden font-semibold text-gray-600">Gap:</span><span class="font-medium">$-25000</span>
@@ -174,7 +171,7 @@
                                             <span class="md:hidden font-semibold text-gray-600">Pipeline:</span><span class="font-medium">$310.0K</span>
                                         </div>
                                         <div class="flex flex-col md:w-12 md:text-right">
-                                            <span class="md:hidden font-semibold text-gray-600">%:</span><span class="font-medium">91%</span>
+                                            <span class="md:hidden font-semibold text-gray-600">%:</span><span class="font-medium text-green-600">91%</span>
                                         </div>
                                     </div>
                                 </div>
@@ -182,41 +179,41 @@
                             <!-- Nested Data for Logan - Hidden by default -->
                             <div id="logan-data" class="hidden pl-6">
                                 <h3 class="text-md font-semibold text-gray-800 my-4">Quarterly Summary</h3>
-                                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-4 text-sm">
-                                    <div class="bg-gray-100 p-4 rounded-lg border border-gray-200">
-                                        <h4 class="font-bold text-gray-800 mb-2">Q1</h4>
-                                        <div class="text-sm">
+                                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-4 text-xs">
+                                    <div class="bg-white-100 p-4 rounded-lg border border-gray-200">
+                                        <h4 class="font-bold text-gray-800 mb-2 text-sm">Q1</h4>
+                                        <div>
                                             <p>Target: <span class="float-right font-medium text-gray-700">$70.0K</span></p>
-                                            <p>Achieved: <span class="float-right font-medium text-gray-700">$65.0K</span></p>
-                                            <p>Gap: <span class="float-right font-medium text-red-500">$-5000</span></p>
-                                            <p>Performance: <span class="float-right font-medium text-green-600">93%</span></p>
+                                            <p>Achieved: <span class="float-right font-medium text-green-600">$65.0K</span></p>
+                                            <p class="pb-2 border-b border-gray-300">Gap: <span class="float-right font-medium text-red-500">$-5000</span></p>
+                                            <p class="pt-2">Performance: <span class="float-right font-medium text-green-600">93%</span></p>
                                         </div>
                                     </div>
-                                    <div class="bg-gray-100 p-4 rounded-lg border border-gray-200">
-                                        <h4 class="font-bold text-gray-800 mb-2">Q2</h4>
-                                        <div class="text-sm">
+                                    <div class="bg-white-100 p-4 rounded-lg border border-gray-200">
+                                        <h4 class="font-bold text-gray-800 mb-2 text-sm">Q2</h4>
+                                        <div>
                                             <p>Target: <span class="float-right font-medium text-gray-700">$80.0K</span></p>
-                                            <p>Achieved: <span class="float-right font-medium text-gray-700">$75.0K</span></p>
-                                            <p>Gap: <span class="float-right font-medium text-red-500">$-5000</span></p>
-                                            <p>Performance: <span class="float-right font-medium text-green-600">94%</span></p>
+                                            <p>Achieved: <span class="float-right font-medium text-green-600">$75.0K</span></p>
+                                            <p class="pb-2 border-b border-gray-300">Gap: <span class="float-right font-medium text-red-500">$-5000</span></p>
+                                            <p class="pt-2">Performance: <span class="float-right font-medium text-green-600">94%</span></p>
                                         </div>
                                     </div>
-                                    <div class="bg-gray-100 p-4 rounded-lg border border-gray-200">
-                                        <h4 class="font-bold text-gray-800 mb-2">Q3</h4>
-                                        <div class="text-sm">
+                                    <div class="bg-white-100 p-4 rounded-lg border border-gray-200">
+                                        <h4 class="font-bold text-gray-800 mb-2 text-sm">Q3</h4>
+                                        <div>
                                             <p>Target: <span class="float-right font-medium text-gray-700">$90.0K</span></p>
-                                            <p>Achieved: <span class="float-right font-medium text-gray-700">$85.0K</span></p>
-                                            <p>Gap: <span class="float-right font-medium text-red-500">$-5000</span></p>
-                                            <p>Performance: <span class="float-right font-medium text-green-600">94%</span></p>
+                                            <p>Achieved: <span class="float-right font-medium text-green-600">$85.0K</span></p>
+                                            <p class="pb-2 border-b border-gray-300">Gap: <span class="float-right font-medium text-red-500">$-5000</span></p>
+                                            <p class="pt-2">Performance: <span class="float-right font-medium text-green-600">94%</span></p>
                                         </div>
                                     </div>
-                                    <div class="bg-gray-100 p-4 rounded-lg border border-gray-200">
-                                        <h4 class="font-bold text-gray-800 mb-2">Q4</h4>
-                                        <div class="text-sm">
+                                    <div class="bg-white-100 p-4 rounded-lg border border-gray-200">
+                                        <h4 class="font-bold text-gray-800 mb-2 text-sm">Q4</h4>
+                                        <div>
                                             <p>Target: <span class="float-right font-medium text-gray-700">$100.0K</span></p>
-                                            <p>Achieved: <span class="float-right font-medium text-gray-700">0</span></p>
-                                            <p>Gap: <span class="float-right font-medium text-red-500">$-100000</span></p>
-                                            <p>Performance: <span class="float-right font-medium text-red-500">0%</span></p>
+                                            <p>Achieved: <span class="float-right font-medium text-green-600">0</span></p>
+                                            <p class="pb-2 border-b border-gray-300">Gap: <span class="float-right font-medium text-red-500">$-100000</span></p>
+                                            <p class="pt-2">Performance: <span class="float-right font-medium text-green-600">0%</span></p>
                                         </div>
                                     </div>
                                 </div>
@@ -231,7 +228,7 @@
                                 </div>
                                 <div class="flex-grow flex justify-between items-center md:flex-row md:justify-between">
                                     <div class="flex flex-col">
-                                        <span class="font-medium text-gray-900">Jinil (ANZ)</span>
+                                        <span class="font-medium text-gray-900">Foumin (ANZ)</span>
                                         <span class="text-sm text-gray-500">Team Lead</span>
                                     </div>
                                     <div class="flex items-center gap-x-3 text-sm">
@@ -239,7 +236,7 @@
                                             <span class="md:hidden font-semibold text-gray-600">Target:</span><span class="font-medium">$260.0K</span>
                                         </div>
                                         <div class="flex flex-col md:w-20 md:text-right">
-                                            <span class="md:hidden font-semibold text-gray-600">Achieved:</span><span class="font-medium">$240.0K</span>
+                                            <span class="md:hidden font-semibold text-gray-600">Achieved:</span><span class="font-medium text-green-600">$240.0K</span>
                                         </div>
                                         <div class="flex flex-col md:w-16 md:text-right text-red-500">
                                             <span class="md:hidden font-semibold text-gray-600">Gap:</span><span class="font-medium">$-20000</span>
@@ -248,7 +245,7 @@
                                             <span class="md:hidden font-semibold text-gray-600">Pipeline:</span><span class="font-medium">$280.0K</span>
                                         </div>
                                         <div class="flex flex-col md:w-12 md:text-right">
-                                            <span class="md:hidden font-semibold text-gray-600">%:</span><span class="font-medium">92%</span>
+                                            <span class="md:hidden font-semibold text-gray-600">%:</span><span class="font-medium text-green-600">92%</span>
                                         </div>
                                     </div>
                                 </div>
@@ -256,41 +253,41 @@
                             <!-- Nested Data for Jinil - Hidden by default -->
                             <div id="jinil-data" class="hidden pl-6">
                                 <h3 class="text-md font-semibold text-gray-800 my-4">Quarterly Summary</h3>
-                                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-4 text-sm">
-                                    <div class="bg-gray-100 p-4 rounded-lg border border-gray-200">
-                                        <h4 class="font-bold text-gray-800 mb-2">Q1</h4>
-                                        <div class="text-sm">
+                                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-4 text-xs">
+                                    <div class="bg-white-100 p-4 rounded-lg border border-gray-200">
+                                        <h4 class="font-bold text-gray-800 mb-2 text-sm">Q1</h4>
+                                        <div>
                                             <p>Target: <span class="float-right font-medium text-gray-700">$60.0K</span></p>
-                                            <p>Achieved: <span class="float-right font-medium text-gray-700">$55.0K</span></p>
-                                            <p>Gap: <span class="float-right font-medium text-red-500">$-5000</span></p>
-                                            <p>Performance: <span class="float-right font-medium text-green-600">92%</span></p>
+                                            <p>Achieved: <span class="float-right font-medium text-green-600">$55.0K</span></p>
+                                            <p class="pb-2 border-b border-gray-300">Gap: <span class="float-right font-medium text-red-500">$-5000</span></p>
+                                            <p class="pt-2">Performance: <span class="float-right font-medium text-green-600">92%</span></p>
                                         </div>
                                     </div>
-                                    <div class="bg-gray-100 p-4 rounded-lg border border-gray-200">
-                                        <h4 class="font-bold text-gray-800 mb-2">Q2</h4>
-                                        <div class="text-sm">
+                                    <div class="bg-white-100 p-4 rounded-lg border border-gray-200">
+                                        <h4 class="font-bold text-gray-800 mb-2 text-sm">Q2</h4>
+                                        <div>
                                             <p>Target: <span class="float-right font-medium text-gray-700">$70.0K</span></p>
-                                            <p>Achieved: <span class="float-right font-medium text-gray-700">$65.0K</span></p>
-                                            <p>Gap: <span class="float-right font-medium text-red-500">$-5000</span></p>
-                                            <p>Performance: <span class="float-right font-medium text-green-600">93%</span></p>
+                                            <p>Achieved: <span class="float-right font-medium text-green-600">$65.0K</span></p>
+                                            <p class="pb-2 border-b border-gray-300">Gap: <span class="float-right font-medium text-red-500">$-5000</span></p>
+                                            <p class="pt-2">Performance: <span class="float-right font-medium text-green-600">93%</span></p>
                                         </div>
                                     </div>
-                                    <div class="bg-gray-100 p-4 rounded-lg border border-gray-200">
-                                        <h4 class="font-bold text-gray-800 mb-2">Q3</h4>
-                                        <div class="text-sm">
+                                    <div class="bg-white-100 p-4 rounded-lg border border-gray-200">
+                                        <h4 class="font-bold text-gray-800 mb-2 text-sm">Q3</h4>
+                                        <div>
                                             <p>Target: <span class="float-right font-medium text-gray-700">$80.0K</span></p>
-                                            <p>Achieved: <span class="float-right font-medium text-gray-700">$75.0K</span></p>
-                                            <p>Gap: <span class="float-right font-medium text-red-500">$-5000</span></p>
-                                            <p>Performance: <span class="float-right font-medium text-green-600">94%</span></p>
+                                            <p>Achieved: <span class="float-right font-medium text-green-600">$75.0K</span></p>
+                                            <p class="pb-2 border-b border-gray-300">Gap: <span class="float-right font-medium text-red-500">$-5000</span></p>
+                                            <p class="pt-2">Performance: <span class="float-right font-medium text-green-600">94%</span></p>
                                         </div>
                                     </div>
-                                    <div class="bg-gray-100 p-4 rounded-lg border border-gray-200">
-                                        <h4 class="font-bold text-gray-800 mb-2">Q4</h4>
-                                        <div class="text-sm">
+                                    <div class="bg-white-100 p-4 rounded-lg border border-gray-200">
+                                        <h4 class="font-bold text-gray-800 mb-2 text-sm">Q4</h4>
+                                        <div>
                                             <p>Target: <span class="float-right font-medium text-gray-700">$90.0K</span></p>
-                                            <p>Achieved: <span class="float-right font-medium text-gray-700">0</span></p>
-                                            <p>Gap: <span class="float-right font-medium text-red-500">$-90000</span></p>
-                                            <p>Performance: <span class="float-right font-medium text-red-500">0%</span></p>
+                                            <p>Achieved: <span class="float-right font-medium text-green-600">0</span></p>
+                                            <p class="pb-2 border-b border-gray-300">Gap: <span class="float-right font-medium text-red-500">$-90000</span></p>
+                                            <p class="pt-2">Performance: <span class="float-right font-medium text-green-600">0%</span></p>
                                         </div>
                                     </div>
                                 </div>
@@ -307,7 +304,7 @@
                         </div>
                          <div class="flex-grow flex justify-between items-center md:flex-row md:justify-between">
                             <div class="flex flex-col">
-                                <span class="font-medium text-gray-900">Foumin (LATAM)</span>
+                                <span class="font-medium text-gray-900">Jinil (India)</span>
                                 <span class="text-sm text-gray-500">Regional Manager</span>
                             </div>
                             <div class="flex items-center gap-x-3 text-sm">
@@ -315,7 +312,7 @@
                                     <span class="md:hidden font-semibold text-gray-600">Target:</span><span class="font-medium">$555.0K</span>
                                 </div>
                                 <div class="flex flex-col md:w-20 md:text-right">
-                                    <span class="md:hidden font-semibold text-gray-600">Achieved:</span><span class="font-medium">$516.0K</span>
+                                    <span class="md:hidden font-semibold text-gray-600">Achieved:</span><span class="font-medium text-green-600">$516.0K</span>
                                 </div>
                                 <div class="flex flex-col md:w-16 md:text-right text-red-500">
                                     <span class="md:hidden font-semibold text-gray-600">Gap:</span><span class="font-medium">$-39000</span>
@@ -324,7 +321,7 @@
                                     <span class="md:hidden font-semibold text-gray-600">Pipeline:</span><span class="font-medium">$595.0K</span>
                                 </div>
                                 <div class="flex flex-col md:w-12 md:text-right">
-                                    <span class="md:hidden font-semibold text-gray-600">%:</span><span class="font-medium">93%</span>
+                                    <span class="md:hidden font-semibold text-gray-600">%:</span><span class="font-medium text-green-600">93%</span>
                                 </div>
                             </div>
                         </div>
@@ -332,47 +329,45 @@
                     
                     <!-- Nested Data for Foumin - Hidden by default -->
                     <div id="regional-foumin-data" class="hidden pl-6">
-                        <!-- Quarterly Summary -->
-                        <h2 class="text-lg font-semibold text-gray-800 my-4">Quarterly Summary</h2>
-                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-4 text-sm">
+                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-4 text-xs">
                             <!-- Q1 Card -->
-                            <div class="bg-gray-100 p-4 rounded-lg border border-gray-200">
-                                <h3 class="font-bold text-gray-800 mb-2">Q1</h3>
-                                <div class="text-sm">
+                            <div class="bg-white-100 p-4 rounded-lg border border-gray-200">
+                                <h3 class="font-bold text-gray-800 mb-2 text-sm">Q1</h3>
+                                <div>
                                     <p>Target: <span class="float-right font-medium text-gray-700">$275.0K</span></p>
-                                    <p>Achieved: <span class="float-right font-medium text-gray-700">$260.0K</span></p>
-                                    <p>Gap: <span class="float-right font-medium text-red-500">$-15000</span></p>
-                                    <p>Performance: <span class="float-right font-medium text-green-600">95%</span></p>
+                                    <p>Achieved: <span class="float-right font-medium text-green-600">$260.0K</span></p>
+                                    <p class="pb-2 border-b border-gray-300">Gap: <span class="float-right font-medium text-red-500">$-15000</span></p>
+                                    <p class="pt-2">Performance: <span class="float-right font-medium text-green-600">95%</span></p>
                                 </div>
                             </div>
                             <!-- Q2 Card -->
-                            <div class="bg-gray-100 p-4 rounded-lg border border-gray-200">
-                                <h3 class="font-bold text-gray-800 mb-2">Q2</h3>
-                                <div class="text-sm">
+                            <div class="bg-white-100 p-4 rounded-lg border border-gray-200">
+                                <h3 class="font-bold text-gray-800 mb-2 text-sm">Q2</h3>
+                                <div>
                                     <p>Target: <span class="float-right font-medium text-gray-700">$280.0K</span></p>
-                                    <p>Achieved: <span class="float-right font-medium text-gray-700">$256.0K</span></p>
-                                    <p>Gap: <span class="float-right font-medium text-red-500">$-24000</span></p>
-                                    <p>Performance: <span class="float-right font-medium text-green-600">91%</span></p>
+                                    <p>Achieved: <span class="float-right font-medium text-green-600">$256.0K</span></p>
+                                    <p class="pb-2 border-b border-gray-300">Gap: <span class="float-right font-medium text-red-500">$-24000</span></p>
+                                    <p class="pt-2">Performance: <span class="float-right font-medium text-green-600">91%</span></p>
                                 </div>
                             </div>
                             <!-- Q3 Card -->
-                            <div class="bg-gray-100 p-4 rounded-lg border border-gray-200">
-                                <h3 class="font-bold text-gray-800 mb-2">Q3</h3>
-                                <div class="text-sm">
+                            <div class="bg-white-100 p-4 rounded-lg border border-gray-200">
+                                <h3 class="font-bold text-gray-800 mb-2 text-sm">Q3</h3>
+                                <div>
                                     <p>Target: <span class="float-right font-medium text-gray-700">$300.0K</span></p>
-                                    <p>Achieved: <span class="float-right font-medium text-gray-700">$290.0K</span></p>
-                                    <p>Gap: <span class="float-right font-medium text-red-500">$-10000</span></p>
-                                    <p>Performance: <span class="float-right font-medium text-green-600">97%</span></p>
+                                    <p>Achieved: <span class="float-right font-medium text-green-600">$290.0K</span></p>
+                                    <p class="pb-2 border-b border-gray-300">Gap: <span class="float-right font-medium text-red-500">$-10000</span></p>
+                                    <p class="pt-2">Performance: <span class="float-right font-medium text-green-600">97%</span></p>
                                 </div>
                             </div>
                             <!-- Q4 Card -->
-                            <div class="bg-gray-100 p-4 rounded-lg border border-gray-200">
-                                <h3 class="font-bold text-gray-800 mb-2">Q4</h3>
-                                <div class="text-sm">
+                            <div class="bg-white-100 p-4 rounded-lg border border-gray-200">
+                                <h3 class="font-bold text-gray-800 mb-2 text-sm">Q4</h3>
+                                <div>
                                     <p>Target: <span class="float-right font-medium text-gray-700">$400.0K</span></p>
-                                    <p>Achieved: <span class="float-right font-medium text-gray-700">0</span></p>
-                                    <p>Gap: <span class="float-right font-medium text-red-500">$-400000</span></p>
-                                    <p>Performance: <span class="float-right font-medium text-red-500">0%</span></p>
+                                    <p>Achieved: <span class="float-right font-medium text-green-600">0</span></p>
+                                    <p class="pb-2 border-b border-gray-300">Gap: <span class="float-right font-medium text-red-500">$-400000</span></p>
+                                    <p class="pt-2">Performance: <span class="float-right font-medium text-green-600">0%</span></p>
                                 </div>
                             </div>
                         </div>
@@ -397,7 +392,7 @@
                                             <span class="md:hidden font-semibold text-gray-600">Target:</span><span class="font-medium">$285.0K</span>
                                         </div>
                                         <div class="flex flex-col md:w-20 md:text-right">
-                                            <span class="md:hidden font-semibold text-gray-600">Achieved:</span><span class="font-medium">$273.0K</span>
+                                            <span class="md:hidden font-semibold text-gray-600">Achieved:</span><span class="font-medium text-green-600">$273.0K</span>
                                         </div>
                                         <div class="flex flex-col md:w-16 md:text-right text-red-500">
                                             <span class="md:hidden font-semibold text-gray-600">Gap:</span><span class="font-medium">$-12000</span>
@@ -406,7 +401,7 @@
                                             <span class="md:hidden font-semibold text-gray-600">Pipeline:</span><span class="font-medium">$305.0K</span>
                                         </div>
                                         <div class="flex flex-col md:w-12 md:text-right">
-                                            <span class="md:hidden font-semibold text-gray-600">%:</span><span class="font-medium">96%</span>
+                                            <span class="md:hidden font-semibold text-gray-600">%:</span><span class="font-medium text-green-600">96%</span>
                                         </div>
                                     </div>
                                 </div>
@@ -414,41 +409,41 @@
                             <!-- Nested Data for Dhana - Hidden by default -->
                             <div id="dhana-data" class="hidden pl-6">
                                 <h3 class="text-md font-semibold text-gray-800 my-4">Quarterly Summary</h3>
-                                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-4 text-sm">
-                                    <div class="bg-gray-100 p-4 rounded-lg border border-gray-200">
-                                        <h4 class="font-bold text-gray-800 mb-2">Q1</h4>
-                                        <div class="text-sm">
+                                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-4 text-xs">
+                                    <div class="bg-white-100 p-4 rounded-lg border border-gray-200">
+                                        <h4 class="font-bold text-gray-800 mb-2 text-sm">Q1</h4>
+                                        <div>
                                             <p>Target: <span class="float-right font-medium text-gray-700">$75.0K</span></p>
-                                            <p>Achieved: <span class="float-right font-medium text-gray-700">$70.0K</span></p>
-                                            <p>Gap: <span class="float-right font-medium text-red-500">$-5000</span></p>
-                                            <p>Performance: <span class="float-right font-medium text-green-600">93%</span></p>
+                                            <p>Achieved: <span class="float-right font-medium text-green-600">$70.0K</span></p>
+                                            <p class="pb-2 border-b border-gray-300">Gap: <span class="float-right font-medium text-red-500">$-5000</span></p>
+                                            <p class="pt-2">Performance: <span class="float-right font-medium text-green-600">93%</span></p>
                                         </div>
                                     </div>
-                                    <div class="bg-gray-100 p-4 rounded-lg border border-gray-200">
-                                        <h4 class="font-bold text-gray-800 mb-2">Q2</h4>
-                                        <div class="text-sm">
+                                    <div class="bg-white-100 p-4 rounded-lg border border-gray-200">
+                                        <h4 class="font-bold text-gray-800 mb-2 text-sm">Q2</h4>
+                                        <div>
                                             <p>Target: <span class="float-right font-medium text-gray-700">$80.0K</span></p>
-                                            <p>Achieved: <span class="float-right font-medium text-gray-700">$75.0K</span></p>
-                                            <p>Gap: <span class="float-right font-medium text-red-500">$-5000</span></p>
-                                            <p>Performance: <span class="float-right font-medium text-green-600">94%</span></p>
+                                            <p>Achieved: <span class="float-right font-medium text-green-600">$75.0K</span></p>
+                                            <p class="pb-2 border-b border-gray-300">Gap: <span class="float-right font-medium text-red-500">$-5000</span></p>
+                                            <p class="pt-2">Performance: <span class="float-right font-medium text-green-600">94%</span></p>
                                         </div>
                                     </div>
-                                    <div class="bg-gray-100 p-4 rounded-lg border border-gray-200">
-                                        <h4 class="font-bold text-gray-800 mb-2">Q3</h4>
-                                        <div class="text-sm">
+                                    <div class="bg-white-100 p-4 rounded-lg border border-gray-200">
+                                        <h4 class="font-bold text-gray-800 mb-2 text-sm">Q3</h4>
+                                        <div>
                                             <p>Target: <span class="float-right font-medium text-gray-700">$90.0K</span></p>
-                                            <p>Achieved: <span class="float-right font-medium text-gray-700">$85.0K</span></p>
-                                            <p>Gap: <span class="float-right font-medium text-red-500">$-5000</span></p>
-                                            <p>Performance: <span class="float-right font-medium text-green-600">94%</span></p>
+                                            <p>Achieved: <span class="float-right font-medium text-green-600">$85.0K</span></p>
+                                            <p class="pb-2 border-b border-gray-300">Gap: <span class="float-right font-medium text-red-500">$-5000</span></p>
+                                            <p class="pt-2">Performance: <span class="float-right font-medium text-green-600">94%</span></p>
                                         </div>
                                     </div>
-                                    <div class="bg-gray-100 p-4 rounded-lg border border-gray-200">
-                                        <h4 class="font-bold text-gray-800 mb-2">Q4</h4>
-                                        <div class="text-sm">
+                                    <div class="bg-white-100 p-4 rounded-lg border border-gray-200">
+                                        <h4 class="font-bold text-gray-800 mb-2 text-sm">Q4</h4>
+                                        <div>
                                             <p>Target: <span class="float-right font-medium text-gray-700">$100.0K</span></p>
-                                            <p>Achieved: <span class="float-right font-medium text-gray-700">0</span></p>
-                                            <p>Gap: <span class="float-right font-medium text-red-500">$-100000</span></p>
-                                            <p>Performance: <span class="float-right font-medium text-red-500">0%</span></p>
+                                            <p>Achieved: <span class="float-right font-medium text-green-600">0</span></p>
+                                            <p class="pb-2 border-b border-gray-300">Gap: <span class="float-right font-medium text-red-500">$-100000</span></p>
+                                            <p class="pt-2">Performance: <span class="float-right font-medium text-green-600">0%</span></p>
                                         </div>
                                     </div>
                                 </div>
@@ -471,7 +466,7 @@
                                             <span class="md:hidden font-semibold text-gray-600">Target:</span><span class="font-medium">$270.0K</span>
                                         </div>
                                         <div class="flex flex-col md:w-20 md:text-right">
-                                            <span class="md:hidden font-semibold text-gray-600">Achieved:</span><span class="font-medium">$243.0K</span>
+                                            <span class="md:hidden font-semibold text-gray-600">Achieved:</span><span class="font-medium text-green-600">$243.0K</span>
                                         </div>
                                         <div class="flex flex-col md:w-16 md:text-right text-red-500">
                                             <span class="md:hidden font-semibold text-gray-600">Gap:</span><span class="font-medium">$-27000</span>
@@ -480,7 +475,7 @@
                                             <span class="md:hidden font-semibold text-gray-600">Pipeline:</span><span class="font-medium">$290.0K</span>
                                         </div>
                                         <div class="flex flex-col md:w-12 md:text-right">
-                                            <span class="md:hidden font-semibold text-gray-600">%:</span><span class="font-medium">90%</span>
+                                            <span class="md:hidden font-semibold text-gray-600">%:</span><span class="font-medium text-green-600">90%</span>
                                         </div>
                                     </div>
                                 </div>
@@ -488,41 +483,41 @@
                             <!-- Nested Data for Dhruv - Hidden by default -->
                             <div id="dhruv-data" class="hidden pl-6">
                                 <h3 class="text-md font-semibold text-gray-800 my-4">Quarterly Summary</h3>
-                                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-4 text-sm">
-                                    <div class="bg-gray-100 p-4 rounded-lg border border-gray-200">
-                                        <h4 class="font-bold text-gray-800 mb-2">Q1</h4>
-                                        <div class="text-sm">
+                                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-4 text-xs">
+                                    <div class="bg-white-100 p-4 rounded-lg border border-gray-200">
+                                        <h4 class="font-bold text-gray-800 mb-2 text-sm">Q1</h4>
+                                        <div>
                                             <p>Target: <span class="float-right font-medium text-gray-700">$65.0K</span></p>
-                                            <p>Achieved: <span class="float-right font-medium text-gray-700">$60.0K</span></p>
-                                            <p>Gap: <span class="float-right font-medium text-red-500">$-5000</span></p>
-                                            <p>Performance: <span class="float-right font-medium text-green-600">92%</span></p>
+                                            <p>Achieved: <span class="float-right font-medium text-green-600">$60.0K</span></p>
+                                            <p class="pb-2 border-b border-gray-300">Gap: <span class="float-right font-medium text-red-500">$-5000</span></p>
+                                            <p class="pt-2">Performance: <span class="float-right font-medium text-green-600">92%</span></p>
                                         </div>
                                     </div>
-                                    <div class="bg-gray-100 p-4 rounded-lg border border-gray-200">
-                                        <h4 class="font-bold text-gray-800 mb-2">Q2</h4>
-                                        <div class="text-sm">
+                                    <div class="bg-white-100 p-4 rounded-lg border border-gray-200">
+                                        <h4 class="font-bold text-gray-800 mb-2 text-sm">Q2</h4>
+                                        <div>
                                             <p>Target: <span class="float-right font-medium text-gray-700">$70.0K</span></p>
-                                            <p>Achieved: <span class="float-right font-medium text-gray-700">$65.0K</span></p>
-                                            <p>Gap: <span class="float-right font-medium text-red-500">$-5000</span></p>
-                                            <p>Performance: <span class="float-right font-medium text-green-600">93%</span></p>
+                                            <p>Achieved: <span class="float-right font-medium text-green-600">$65.0K</span></p>
+                                            <p class="pb-2 border-b border-gray-300">Gap: <span class="float-right font-medium text-red-500">$-5000</span></p>
+                                            <p class="pt-2">Performance: <span class="float-right font-medium text-green-600">93%</span></p>
                                         </div>
                                     </div>
-                                    <div class="bg-gray-100 p-4 rounded-lg border border-gray-200">
-                                        <h4 class="font-bold text-gray-800 mb-2">Q3</h4>
-                                        <div class="text-sm">
+                                    <div class="bg-white-100 p-4 rounded-lg border border-gray-200">
+                                        <h4 class="font-bold text-gray-800 mb-2 text-sm">Q3</h4>
+                                        <div>
                                             <p>Target: <span class="float-right font-medium text-gray-700">$80.0K</span></p>
-                                            <p>Achieved: <span class="float-right font-medium text-gray-700">$75.0K</span></p>
-                                            <p>Gap: <span class="float-right font-medium text-red-500">$-5000</span></p>
-                                            <p>Performance: <span class="float-right font-medium text-green-600">94%</span></p>
+                                            <p>Achieved: <span class="float-right font-medium text-green-600">$75.0K</span></p>
+                                            <p class="pb-2 border-b border-gray-300">Gap: <span class="float-right font-medium text-red-500">$-5000</span></p>
+                                            <p class="pt-2">Performance: <span class="float-right font-medium text-green-600">94%</span></p>
                                         </div>
                                     </div>
-                                    <div class="bg-gray-100 p-4 rounded-lg border border-gray-200">
-                                        <h4 class="font-bold text-gray-800 mb-2">Q4</h4>
-                                        <div class="text-sm">
+                                    <div class="bg-white-100 p-4 rounded-lg border border-gray-200">
+                                        <h4 class="font-bold text-gray-800 mb-2 text-sm">Q4</h4>
+                                        <div>
                                             <p>Target: <span class="float-right font-medium text-gray-700">$90.0K</span></p>
-                                            <p>Achieved: <span class="float-right font-medium text-gray-700">0</span></p>
-                                            <p>Gap: <span class="float-right font-medium text-red-500">$-90000</span></p>
-                                            <p>Performance: <span class="float-right font-medium text-red-500">0%</span></p>
+                                            <p>Achieved: <span class="float-right font-medium text-green-600">0</span></p>
+                                            <p class="pb-2 border-b border-gray-300">Gap: <span class="float-right font-medium text-red-500">$-90000</span></p>
+                                            <p class="pt-2">Performance: <span class="float-right font-medium text-green-600">0%</span></p>
                                         </div>
                                     </div>
                                 </div>

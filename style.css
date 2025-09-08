@@ -2,3 +2,6 @@ body {
     font-family: 'Inter', sans-serif;
     background-color: #f3f4f6;
 }
+.p-6 {
+    padding: 0.7rem;
+}
